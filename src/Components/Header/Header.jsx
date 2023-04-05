@@ -21,21 +21,21 @@ const Header = () => {
           <li>
             <NavLink
               to="/"
-              className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
+              className={({ isActive }) => (isActive ? "active" : "default")}>
               Home
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/books"
-              className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
+              className={({ isActive }) => (isActive ? "active" : "default")}>
               Books
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/about"
-              className={({ isActive }) => (isActive ? "text-blue-600" : "")}>
+              className={({ isActive }) => (isActive ? "active" : "default")}>
               About
             </NavLink>
           </li>
