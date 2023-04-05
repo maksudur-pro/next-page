@@ -1,13 +1,16 @@
 import React from "react";
-import Home from "./Components/Home/Home";
 import { Outlet } from "react-router-dom";
 import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
     <>
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="min-h-[calc(100vh-136px)]">
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
     </>
   );
 };
