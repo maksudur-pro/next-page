@@ -1,8 +1,13 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import Book from "../Book/Book";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const Books = () => {
+  const navigation = useNavigation();
+  if (navigation.state === "loading") {
+    return <LoadingSpinner></LoadingSpinner>;
+  }
   const { books } = useLoaderData();
   return (
     <div className="my-container">
